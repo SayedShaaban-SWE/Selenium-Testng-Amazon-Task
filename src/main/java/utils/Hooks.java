@@ -66,7 +66,7 @@ public class Hooks {
             ChromeOptions options = new ChromeOptions();
             // Check if running in GitHub Actions
             if ("true".equals(System.getenv("GITHUB_ACTIONS"))) {
-                options.addArguments("--headless"); // Enable headless only in GitHub Actions
+                options.addArguments("--headless=new"); // Enable headless only in GitHub Actions
                 options.addArguments("--window-size=1920,1080");
                 options.addArguments("--no-sandbox");
                 options.addArguments("--disable-dev-shm-usage");
@@ -77,7 +77,7 @@ public class Hooks {
             WebDriverManager.firefoxdriver().setup();
             FirefoxOptions options = new FirefoxOptions();
             if ("true".equals(System.getenv("GITHUB_ACTIONS"))) {
-                options.addArguments("--headless"); // Enable headless only in GitHub Actions
+                options.addArguments("--headless=new"); // Enable headless only in GitHub Actions
                 options.addArguments("--window-size=1920,1080");
                 options.addArguments("--no-sandbox");
                 options.addArguments("--disable-dev-shm-usage");
@@ -88,7 +88,7 @@ public class Hooks {
             WebDriverManager.edgedriver().setup();
             EdgeOptions options = new EdgeOptions();
             if ("true".equals(System.getenv("GITHUB_ACTIONS"))) {
-                options.addArguments("--headless"); // Enable headless only in GitHub Actions
+                options.addArguments("--headless=new"); // Enable headless only in GitHub Actions
                 options.addArguments("--window-size=1920,1080");
                 options.addArguments("--no-sandbox");
                 options.addArguments("--disable-dev-shm-usage");
