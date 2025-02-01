@@ -1,0 +1,62 @@
+name: CI/CD Pipeline with Selenium, TestNG, and Allure Reports
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+
+    - name: Cache Maven packages
+      uses: actions/cache@v3
+      with:
+        path: ~/.m2/repository
+        key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+        restore-keys: |
+          ${{ runner.os }}-m2-
+
+    - name: Build with Maven
+      run: mvn clean install -DskipTests
+
+    - name: Run TestNG Tests
+      run: mvn test
+
+    - name: Generate Allure Report
+      run: |
+        mvn allure:report
+
+    - name: Archive Allure Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: allure-report
+        path: target/site/allure-maven-plugin
+
+    - name: Archive TestNG Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: testng-report
+        path: target/surefire-reports
+
+    - name: Upload Allure Report as GitHub Pages
+      if: github.ref == 'refs/heads/main'
+      run: |
+        mkdir -p docs
+        cp -r target/site/allure-maven-plugin/* docs/
+        echo "allure-report.example.com" > docs/CNAME
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
