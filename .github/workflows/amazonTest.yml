@@ -1,4 +1,4 @@
-name: CI/CD Pipeline with Selenium, TestNG, and Allure Reports
+name: Amazone CI/CD test
 
 on:
   push:
