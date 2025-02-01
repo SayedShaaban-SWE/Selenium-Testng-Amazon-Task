@@ -67,6 +67,7 @@ public class Hooks {
             // Check if running in GitHub Actions
             if ("true".equals(System.getenv("GITHUB_ACTIONS"))) {
                 options.addArguments("--headless"); // Enable headless only in GitHub Actions
+                options.addArguments("--window-size=1920,1080");
                 options.addArguments("--no-sandbox");
                 options.addArguments("--disable-dev-shm-usage");
             }else
@@ -77,6 +78,7 @@ public class Hooks {
             FirefoxOptions options = new FirefoxOptions();
             if ("true".equals(System.getenv("GITHUB_ACTIONS"))) {
                 options.addArguments("--headless"); // Enable headless only in GitHub Actions
+                options.addArguments("--window-size=1920,1080");
                 options.addArguments("--no-sandbox");
                 options.addArguments("--disable-dev-shm-usage");
             }else
@@ -87,6 +89,7 @@ public class Hooks {
             EdgeOptions options = new EdgeOptions();
             if ("true".equals(System.getenv("GITHUB_ACTIONS"))) {
                 options.addArguments("--headless"); // Enable headless only in GitHub Actions
+                options.addArguments("--window-size=1920,1080");
                 options.addArguments("--no-sandbox");
                 options.addArguments("--disable-dev-shm-usage");
             }else
