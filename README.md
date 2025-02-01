@@ -72,11 +72,11 @@
 2. Open the project in your IDE (IntelliJ IDEA or Eclipse).
 3. Open the terminal in project root path and run the following:
    * **Run tests using Maven:**
-    ```CMD
-      mvn clean test
+     ```CMD
+       mvn clean test
    * **Run tests using TestNG XML:**
-    ```CMD
-      mvn test -Dtestng.xml=TestNG.xml
+     ```CMD
+       mvn test -Dtestng.xml=TestNG.xml
 
 ### 📈 Generate reports
 1. TestNG Reports:
