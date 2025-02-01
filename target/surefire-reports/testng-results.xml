@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-02-01T13:55:35 EET" name="TestSuite" finished-at="2025-02-01T13:56:53 EET" duration-ms="78000">
+    <groups>
+    </groups>
+    <test started-at="2025-02-01T13:55:35 EET" name="Test reqres apis" finished-at="2025-02-01T13:55:38 EET" duration-ms="2685">
+      <class name="tests.ApiTests">
+        <test-method is-config="true" signature="objectsInitialization()[pri:0, instance:tests.ApiTests@6bbe2511]" started-at="2025-02-01T13:55:35 EET" name="objectsInitialization" finished-at="2025-02-01T13:55:38 EET" duration-ms="2546" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- objectsInitialization -->
+        <test-method signature="createUser()[pri:0, instance:tests.ApiTests@6bbe2511]" started-at="2025-02-01T13:55:38 EET" name="createUser" finished-at="2025-02-01T13:55:38 EET" duration-ms="32" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createUser -->
+        <test-method signature="retrieveUser()[pri:0, instance:tests.ApiTests@6bbe2511]" started-at="2025-02-01T13:55:38 EET" name="retrieveUser" finished-at="2025-02-01T13:55:38 EET" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- retrieveUser -->
+        <test-method signature="updateUser()[pri:0, instance:tests.ApiTests@6bbe2511]" started-at="2025-02-01T13:55:38 EET" name="updateUser" finished-at="2025-02-01T13:55:38 EET" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateUser -->
+      </class> <!-- tests.ApiTests -->
+    </test> <!-- Test reqres apis -->
+    <test started-at="2025-02-01T13:55:35 EET" name="Test with Chrome" finished-at="2025-02-01T13:56:53 EET" duration-ms="78000">
+      <class name="tests.AmazonTests">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:tests.AmazonTests@5adb0db3]" started-at="2025-02-01T13:55:35 EET" name="setup" finished-at="2025-02-01T13:55:36 EET" duration-ms="1258" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="generalSteps()[pri:0, instance:tests.AmazonTests@5adb0db3]" started-at="2025-02-01T13:55:36 EET" name="generalSteps" finished-at="2025-02-01T13:55:57 EET" duration-ms="20908" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generalSteps -->
+        <test-method signature="addProductsToTheCartAndCheckout()[pri:0, instance:tests.AmazonTests@5adb0db3]" started-at="2025-02-01T13:55:57 EET" name="addProductsToTheCartAndCheckout" finished-at="2025-02-01T13:56:53 EET" duration-ms="55584" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addProductsToTheCartAndCheckout -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.AmazonTests@5adb0db3]" started-at="2025-02-01T13:56:53 EET" name="tearDown" finished-at="2025-02-01T13:56:53 EET" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addProductsToTheCartAndCheckout status=SUCCESS method=AmazonTests.addProductsToTheCartAndCheckout()[pri:0, instance:tests.AmazonTests@5adb0db3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="quitDriver()[pri:0, instance:tests.AmazonTests@5adb0db3]" started-at="2025-02-01T13:56:53 EET" name="quitDriver" finished-at="2025-02-01T13:56:53 EET" duration-ms="196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+      </class> <!-- tests.AmazonTests -->
+    </test> <!-- Test with Chrome -->
+  </suite> <!-- TestSuite -->
+</testng-results>

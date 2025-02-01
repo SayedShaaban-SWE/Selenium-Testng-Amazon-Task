@@ -1,0 +1,232 @@
+2025-02-01 13:55:35 [main] DEBUG org.testng.TestNG - suiteXmlPath: "C:\Users\sayed\IdeaProjects\Foodics-Amazon-Task\testNG.xml"
+2025-02-01 13:55:35 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2025-02-01 13:55:35 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2025-02-01 13:55:35 [main] WARN  org.testng.TestNG - Ignoring duplicate listener : io.qameta.allure.testng.AllureTestNg
+2025-02-01 13:55:35 [TestNG-tests-1] DEBUG i.g.bonigarcia.wdm.WebDriverManager - Using WebDriverManager 5.9.2
+2025-02-01 13:55:35 [TestNG-tests-1] DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=132 in cache (valid until 14:05:33 01/02/2025 EET)
+2025-02-01 13:55:35 [TestNG-tests-1] DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome132=132.0.6834.159 in cache (valid until 14:51:34 01/02/2025 EET)
+2025-02-01 13:55:35 [TestNG-tests-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 132.0.6834.159 (resolved driver for Chrome 132)
+2025-02-01 13:55:36 [TestNG-tests-1] DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 132.0.6834.159 found in cache
+2025-02-01 13:55:36 [TestNG-tests-1] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\sayed\.cache\selenium\chromedriver\win64\132.0.6834.159\chromedriver.exe
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG o.a.h.i.c.BasicClientConnectionManager - Get connection for route {s}->https://reqres.in:443
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG o.a.h.i.c.DefaultClientConnectionOperator - Connecting to reqres.in:443
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG o.a.h.c.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG o.a.h.c.protocol.RequestAuthCache - Auth cache not set in the context
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG o.a.h.impl.client.DefaultHttpClient - Attempt 1 to execute request
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG o.a.h.i.conn.DefaultClientConnection - Sending request: POST /api/users HTTP/1.1
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "POST /api/users HTTP/1.1[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "Content-Type: application/json[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "Content-Length: 53[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "Host: reqres.in[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - >> POST /api/users HTTP/1.1
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - >> Accept: */*
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - >> Content-Type: application/json
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - >> Content-Length: 53
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - >> Host: reqres.in
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "{"id":2,"name":"Sayed","job":"TAE Engineer","age":27}"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "HTTP/1.1 201 Created[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Date: Sat, 01 Feb 2025 11:55:37 GMT[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Content-Length: 92[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Report-To: {"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1738410937&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=u1UXmFQuT01CuKcthwhZplGW4Tsbj4HP%2FEYyDjWd9us%3D"}]}[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1738410937&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=u1UXmFQuT01CuKcthwhZplGW4Tsbj4HP%2FEYyDjWd9us%3D[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Nel: {"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "X-Powered-By: Express[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Access-Control-Allow-Origin: *[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Etag: W/"5c-NouwnYP/wFo1Pi/5uEyVkCpG4OU"[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Via: 1.1 vegur[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "cf-cache-status: DYNAMIC[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Server: cloudflare[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "CF-RAY: 90b1c0e55fa50e63-MXP[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "server-timing: cfL4;desc="?proto=TCP&rtt=63497&min_rtt=61688&rtt_var=26752&sent=6&recv=6&lost=0&retrans=0&sent_bytes=3106&recv_bytes=874&delivery_rate=55930&cwnd=234&unsent_bytes=0&cid=bae1cc788d4909a1&ts=248&x=0"[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG o.a.h.i.conn.DefaultClientConnection - Receiving response: HTTP/1.1 201 Created
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << HTTP/1.1 201 Created
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << Date: Sat, 01 Feb 2025 11:55:37 GMT
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << Content-Type: application/json; charset=utf-8
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << Content-Length: 92
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << Connection: keep-alive
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << Report-To: {"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1738410937&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=u1UXmFQuT01CuKcthwhZplGW4Tsbj4HP%2FEYyDjWd9us%3D"}]}
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1738410937&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=u1UXmFQuT01CuKcthwhZplGW4Tsbj4HP%2FEYyDjWd9us%3D
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << Nel: {"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << X-Powered-By: Express
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << Access-Control-Allow-Origin: *
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << Etag: W/"5c-NouwnYP/wFo1Pi/5uEyVkCpG4OU"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << Via: 1.1 vegur
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << cf-cache-status: DYNAMIC
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << Server: cloudflare
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << CF-RAY: 90b1c0e55fa50e63-MXP
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << server-timing: cfL4;desc="?proto=TCP&rtt=63497&min_rtt=61688&rtt_var=26752&sent=6&recv=6&lost=0&retrans=0&sent_bytes=3106&recv_bytes=874&delivery_rate=55930&cwnd=234&unsent_bytes=0&cid=bae1cc788d4909a1&ts=248&x=0"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG o.a.h.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG i.r.internal.RestAssuredHttpBuilder - Parsing response as: application/json; charset=utf-8
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG i.r.internal.RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "{"id":2,"name":"Sayed","job":"TAE Engineer","age":27,"createdAt":"2025-02-01T11:55:37.264Z"}"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG o.a.h.i.c.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@7113ac76
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG o.a.h.i.c.BasicClientConnectionManager - Connection can be kept alive indefinitely
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG o.a.h.i.c.BasicClientConnectionManager - Get connection for route {s}->https://reqres.in:443
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG o.a.h.i.c.DefaultClientConnectionOperator - Connecting to reqres.in:443
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG o.a.h.c.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG o.a.h.c.protocol.RequestAuthCache - Auth cache not set in the context
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG o.a.h.impl.client.DefaultHttpClient - Attempt 1 to execute request
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG o.a.h.i.conn.DefaultClientConnection - Sending request: GET /api/users/2 HTTP/1.1
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "GET /api/users/2 HTTP/1.1[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "Content-Type: application/json[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "Host: reqres.in[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - >> GET /api/users/2 HTTP/1.1
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - >> Content-Type: application/json
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - >> Accept: */*
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - >> Host: reqres.in
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Date: Sat, 01 Feb 2025 11:55:37 GMT[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Report-To: {"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1738344192&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=9%2FGzkNOHVgAg6RNxyhN2G8r12WTVpzr5fi2TbjOiVS4%3D"}]}[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1738344192&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=9%2FGzkNOHVgAg6RNxyhN2G8r12WTVpzr5fi2TbjOiVS4%3D[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Nel: {"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "X-Powered-By: Express[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Access-Control-Allow-Origin: *[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Etag: W/"152-ApQgGHL6RKwaebFlrPCYPBO1xHg"[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Via: 1.1 vegur[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Cache-Control: max-age=14400[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "CF-Cache-Status: HIT[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Age: 1910[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Vary: Accept-Encoding[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Server: cloudflare[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "CF-RAY: 90b1c0e7cfd7eea1-MXP[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Content-Encoding: gzip[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "server-timing: cfL4;desc="?proto=TCP&rtt=59861&min_rtt=56724&rtt_var=23512&sent=5&recv=6&lost=0&retrans=0&sent_bytes=3106&recv_bytes=802&delivery_rate=75100&cwnd=252&unsent_bytes=0&cid=76b3ca241fe46ca8&ts=76&x=0"[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG o.a.h.i.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << HTTP/1.1 200 OK
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << Date: Sat, 01 Feb 2025 11:55:37 GMT
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << Content-Type: application/json; charset=utf-8
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << Transfer-Encoding: chunked
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << Connection: keep-alive
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << Report-To: {"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1738344192&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=9%2FGzkNOHVgAg6RNxyhN2G8r12WTVpzr5fi2TbjOiVS4%3D"}]}
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1738344192&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=9%2FGzkNOHVgAg6RNxyhN2G8r12WTVpzr5fi2TbjOiVS4%3D
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << Nel: {"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << X-Powered-By: Express
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << Access-Control-Allow-Origin: *
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << Etag: W/"152-ApQgGHL6RKwaebFlrPCYPBO1xHg"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << Via: 1.1 vegur
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << Cache-Control: max-age=14400
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << CF-Cache-Status: HIT
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << Age: 1910
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << Vary: Accept-Encoding
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << Server: cloudflare
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << CF-RAY: 90b1c0e7cfd7eea1-MXP
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << Content-Encoding: gzip
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.headers - << server-timing: cfL4;desc="?proto=TCP&rtt=59861&min_rtt=56724&rtt_var=23512&sent=5&recv=6&lost=0&retrans=0&sent_bytes=3106&recv_bytes=802&delivery_rate=75100&cwnd=252&unsent_bytes=0&cid=76b3ca241fe46ca8&ts=76&x=0"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG o.a.h.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG i.r.internal.RestAssuredHttpBuilder - Parsing response as: application/json; charset=utf-8
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "f8[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x3]M[0x8e][0xc1]j[0xc3]0[0x10]De[0xd9]CO[0xaa][\r]9[\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "L[\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "[0xb9][0x95][0x1e][0xb]=[0x86]EZ[0xbb]k,[0xc9]Y[0xad][0x93][0x86][0xe0]/NJ[0xdb][0xe3][0xc]3o[0xe6][0x86][0x91][0x8c][0xd0][0xdf]P"[0xfa][0x9d]CN$[0x13]z[0x1c])[0xb3]5[0x17][0xa6]3[0xeb][0x8b][0xf2]I[0xb9]6[0x92][0xd1]a/Z[0xed][0x98])1z|[0xdd]R[0xe8]p[0xa2]?[0xef][0xe3][0xde]A[0x87]t&#E[0x8f][0x9f]fs[0xf5]m[0xfb][0x8b]i%[\r]mO[0x81]k[0xbb]{[0x96]D[0x3]7[0xe3]<[0xe0][0xea][0xb0].[0xf3]\[0xd4][0xb6]C[0x8b]N[0xff][0xba][0xa1]d[0xe3]l[0x81]b[0xbc]6R[0xf6][0x8b][0xa5]c-[0x8b][0x6][0xee][0x1e][0xd8][0xa7][0xcd]I[0x1c]eI[0xdd]XK[0xbe][0xeb]@i&[0x19]r[0xa7][0xdc][0xb3]*M[0xe8][0xd0][0xf8][0xcb][0xd0][0xe3][0xbb](G(=\TL[0xf2][0x0][0x9c][0xe3][0xc4][0xb5]B-Ah[0x82][\r]E[0xf0]3[0xbb][0x87]7"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "68<[0x4][0x1c][0xb6][0x13]0pf%c[0x10][0x83][0xbe](\[0xcb][0xd2][0xe0][0xba]~[0x3]u[0x8b]!1R[0x1][0x0][0x0]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "0[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG i.r.internal.RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG o.a.h.i.c.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@676597c5
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG o.a.h.i.c.BasicClientConnectionManager - Connection can be kept alive indefinitely
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG o.a.h.i.c.BasicClientConnectionManager - Get connection for route {s}->https://reqres.in:443
+2025-02-01 13:55:37 [TestNG-tests-2] DEBUG o.a.h.i.c.DefaultClientConnectionOperator - Connecting to reqres.in:443
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG o.a.h.c.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG o.a.h.c.protocol.RequestAuthCache - Auth cache not set in the context
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG o.a.h.impl.client.DefaultHttpClient - Attempt 1 to execute request
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG o.a.h.i.conn.DefaultClientConnection - Sending request: PUT /api/users/2 HTTP/1.1
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "PUT /api/users/2 HTTP/1.1[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "Content-Type: application/json[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "Content-Length: 57[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "Host: reqres.in[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.headers - >> PUT /api/users/2 HTTP/1.1
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.headers - >> Accept: */*
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.headers - >> Content-Type: application/json
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.headers - >> Content-Length: 57
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.headers - >> Host: reqres.in
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.6)
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  >> "{"name":"Sayed2","job":"TAE Engineer 2","createdAt":null}"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Date: Sat, 01 Feb 2025 11:55:37 GMT[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Transfer-Encoding: chunked[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Connection: keep-alive[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Report-To: {"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1738410937&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=u1UXmFQuT01CuKcthwhZplGW4Tsbj4HP%2FEYyDjWd9us%3D"}]}[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1738410937&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=u1UXmFQuT01CuKcthwhZplGW4Tsbj4HP%2FEYyDjWd9us%3D[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Nel: {"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "X-Powered-By: Express[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Access-Control-Allow-Origin: *[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Etag: W/"60-g9scpRL2ucVNBFIY5LmwLMyYAb4"[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Via: 1.1 vegur[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "CF-Cache-Status: DYNAMIC[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Vary: Accept-Encoding[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Server: cloudflare[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "CF-RAY: 90b1c0e988343760-MXP[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "Content-Encoding: gzip[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "server-timing: cfL4;desc="?proto=TCP&rtt=101525&min_rtt=55333&rtt_var=53744&sent=5&recv=6&lost=0&retrans=0&sent_bytes=3106&recv_bytes=879&delivery_rate=76988&cwnd=249&unsent_bytes=0&cid=1b70a28c92672d1e&ts=177&x=0"[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG o.a.h.i.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.headers - << HTTP/1.1 200 OK
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.headers - << Date: Sat, 01 Feb 2025 11:55:37 GMT
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.headers - << Content-Type: application/json; charset=utf-8
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.headers - << Transfer-Encoding: chunked
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.headers - << Connection: keep-alive
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.headers - << Report-To: {"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1738410937&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=u1UXmFQuT01CuKcthwhZplGW4Tsbj4HP%2FEYyDjWd9us%3D"}]}
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.headers - << Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1738410937&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=u1UXmFQuT01CuKcthwhZplGW4Tsbj4HP%2FEYyDjWd9us%3D
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.headers - << Nel: {"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.headers - << X-Powered-By: Express
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.headers - << Access-Control-Allow-Origin: *
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.headers - << Etag: W/"60-g9scpRL2ucVNBFIY5LmwLMyYAb4"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.headers - << Via: 1.1 vegur
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.headers - << CF-Cache-Status: DYNAMIC
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.headers - << Vary: Accept-Encoding
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.headers - << Server: cloudflare
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.headers - << CF-RAY: 90b1c0e988343760-MXP
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.headers - << Content-Encoding: gzip
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.headers - << server-timing: cfL4;desc="?proto=TCP&rtt=101525&min_rtt=55333&rtt_var=53744&sent=5&recv=6&lost=0&retrans=0&sent_bytes=3106&recv_bytes=879&delivery_rate=76988&cwnd=249&unsent_bytes=0&cid=1b70a28c92672d1e&ts=177&x=0"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG o.a.h.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG i.r.internal.RestAssuredHttpBuilder - Parsing response as: application/json; charset=utf-8
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "72[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "[0x1f][0x8b][0x8][0x0][0x0][0x0][0x0][0x0][0x0][0x3][0xaa]V[0xca]K[0xcc]MU[0xb2]R[\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "N[0xac]LM1R[0xd2]Q[0xca][0xca]OR[0xb2]R[\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "qtUp[0xcd]K[0xcf][0xcc]KM-R[0x0][0x9]'[0x17][0xa5]&[0x96][0xa4][0xa6]8[0x96](Y[0xe5][0x95][0xe6][0xe4][0xe8]([0x95][0x16][0xa4][0xc0][0x4][0x94][0x8c][0xc][0x8c]Lu[\r][0x8c]t[\r][0xc]C[0xc][\r][0xad]LM[0xad][0x8c][0xcd][0xf5],[0x8d][\r][0xa2][0x94]j[0x1][0x0][0x0][0x0][0xff][0xff][0x3][0x0][0xdc]idJ`[0x0][0x0][0x0]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "0[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG org.apache.http.wire -  << "[\r][\n]"
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG i.r.internal.RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG o.a.h.i.c.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@5c19bc42
+2025-02-01 13:55:38 [TestNG-tests-2] DEBUG o.a.h.i.c.BasicClientConnectionManager - Connection can be kept alive indefinitely
+2025-02-01 13:56:07 [Finalizer] DEBUG o.a.h.i.conn.DefaultClientConnection - Connection 0.0.0.0:62599<->172.67.73.173:443 closed
+2025-02-01 13:56:07 [Finalizer] DEBUG o.a.h.i.conn.DefaultClientConnection - Connection 0.0.0.0:62602<->172.67.73.173:443 closed
