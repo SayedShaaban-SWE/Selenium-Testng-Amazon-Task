@@ -42,6 +42,7 @@ public class GamesFilterPage {
     }
 
     public void sortByPriceHighToLow() throws InterruptedException {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(SORT_DROPDOWN));
         Select sort = new Select(driver.findElement(SORT_DROPDOWN));
         Actions actions = new Actions(driver);
         // Select the element
