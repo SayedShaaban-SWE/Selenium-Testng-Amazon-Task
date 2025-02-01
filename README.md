@@ -67,7 +67,7 @@
 
 1. Clone the repository:
    ```CMD
-   git clone https://github.com/your-repo/selenium-java-testng.git
+   `git clone https://github.com/SayedShaaban-SWE/Selenium-Testng-Amazon-Task.git`
 
 2. Open the project in your IDE (IntelliJ IDEA or Eclipse).
 3. Open the terminal in project root path and run the following:
