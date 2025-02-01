@@ -67,14 +67,16 @@
 
 1. Clone the repository:
    ```CMD
-   `git clone https://github.com/SayedShaaban-SWE/Selenium-Testng-Amazon-Task.git`
+   git clone https://github.com/SayedShaaban-SWE/Selenium-Testng-Amazon-Task.git
 
 2. Open the project in your IDE (IntelliJ IDEA or Eclipse).
 3. Open the terminal in project root path and run the following:
    * **Run tests using Maven:**
-     * `mvn clean test`
+    ```CMD
+      mvn clean test
    * **Run tests using TestNG XML:**
-     * `mvn test -Dtestng.xml=TestNG.xml`
+    ```CMD
+      mvn test -Dtestng.xml=TestNG.xml
 
 ### 📈 Generate reports
 1. TestNG Reports:
@@ -83,7 +85,8 @@
      
 2. Allure Reports:
    * **Open the terminal in project root path and run the following:**
-     * `allure serve allure-results`
+     ```CMD
+     allure serve allure-results
    * **Open the report in your browser.**
       
    
