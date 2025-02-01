@@ -1,4 +1,4 @@
-name: Amazone CI/CD test
+name: Amazon CI/CD test
 
 on:
   push:
