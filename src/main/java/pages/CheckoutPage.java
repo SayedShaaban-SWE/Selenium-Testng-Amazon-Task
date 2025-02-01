@@ -92,18 +92,19 @@ public class CheckoutPage {
             WebElement cashOption = wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOfElementLocated(CASH_PAYMENT_OPTION)));
             if (cashOption.isEnabled()) {
                 cashOption.click();
+                Logger.info("The cash payment option is valid...!");
             }
         } catch (NoSuchElementException | TimeoutException e) {
             Logger.info("The cash payment option is not valid: [%s]", e.getMessage());
             WebElement valueOption = wait.until(ExpectedConditions.visibilityOfElementLocated(VALUE_PAYMENT_OPTION));
             if (valueOption.isEnabled()) {
                 valueOption.click();
+                Logger.info("The value payment option is valid...!");
             }
         }
 
         WebElement useThisPayment = wait.until(ExpectedConditions.elementToBeClickable(USE_THIS_PAYMENT_METHOD_BUTTON));
         ScrollHelper.scrollToElement(driver, USE_THIS_PAYMENT_METHOD_BUTTON);
         useThisPayment.click();
-
     }
 }

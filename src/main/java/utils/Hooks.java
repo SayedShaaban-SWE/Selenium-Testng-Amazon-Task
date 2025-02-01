@@ -64,17 +64,33 @@ public class Hooks {
         if (browserName.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("--start-maximized");
+            // Check if running in GitHub Actions
+            if ("true".equals(System.getenv("GITHUB_ACTIONS"))) {
+                options.addArguments("--headless"); // Enable headless only in GitHub Actions
+                options.addArguments("--no-sandbox");
+                options.addArguments("--disable-dev-shm-usage");
+            }else
+                options.addArguments("--start-maximized");
             driver = new ChromeDriver(options);
         } else if (browserName.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             FirefoxOptions options = new FirefoxOptions();
-            options.addArguments("--start-maximized");
+            if ("true".equals(System.getenv("GITHUB_ACTIONS"))) {
+                options.addArguments("--headless"); // Enable headless only in GitHub Actions
+                options.addArguments("--no-sandbox");
+                options.addArguments("--disable-dev-shm-usage");
+            }else
+                options.addArguments("--start-maximized");
             driver = new FirefoxDriver(options);
         } else if (browserName.equalsIgnoreCase("edge")) {
             WebDriverManager.edgedriver().setup();
             EdgeOptions options = new EdgeOptions();
-            options.addArguments("--start-maximized");
+            if ("true".equals(System.getenv("GITHUB_ACTIONS"))) {
+                options.addArguments("--headless"); // Enable headless only in GitHub Actions
+                options.addArguments("--no-sandbox");
+                options.addArguments("--disable-dev-shm-usage");
+            }else
+                options.addArguments("--start-maximized");
             driver = new EdgeDriver(options);
         } else {
             throw new IllegalArgumentException("Unsupported browser: " + browserName);
