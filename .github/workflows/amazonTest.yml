@@ -109,7 +109,7 @@ jobs:
           body: |
             The workflow "${{ github.workflow }}" has completed with status: ${{ job.status }}.
             View the workflow run here: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          to: recipient@example.com
+          to: sayed.swengineer@gmail.com
           from: ${{ secrets.EMAIL_USERNAME }}
           content_type: text/plain
 
@@ -121,7 +121,7 @@ jobs:
       - name: Send Slack notification
         uses: slackapi/slack-github-action@v1
         with:
-          channel-id: 'YOUR_SLACK_CHANNEL_ID' # Replace with your Slack channel ID
+          channel-id: 'C08BWJNCSP9' # Replace with your Slack channel ID
           slack-message: |
             Workflow "${{ github.workflow }}" has completed with status: ${{ job.status }}.
             View the workflow run here: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
