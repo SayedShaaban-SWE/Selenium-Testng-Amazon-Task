@@ -15,10 +15,11 @@ public class HomePage {
     private static final By EN_LANG = By.xpath("//*[@id=\"icp-language-settings\"]/div[3]/div/label/i");
     private static final By SAVE_CHANGES_BTN = By.xpath("//*[@id=\"icp-save-button\"]/span/input");
     private static final By LOGIN_LINK = By.id("nav-link-accountList");
-    private static final By ALL_MENU_ICON = By.id("nav-hamburger-menu");
-    private static final By SEE_ALL = By.xpath("//div[contains(text(),'See all')]");
-    private static final By VIDEO_GAMES = By.xpath("(//div[@id='hmenu-container']//a[div[text()='Video Games']])[1]");
-    private static final By ALL_VIDEO_GAMES = By.xpath("(//*[text()='All Video Games'])[2]");
+    private static final By VIDEO_GAMES = By.linkText("Video Games");
+//    private static final By ALL_MENU_ICON = By.id("nav-hamburger-menu");
+//    private static final By SEE_ALL = By.xpath("//div[contains(text(),'See all')]");
+//    private static final By VIDEO_GAMES = By.xpath("(//div[@id='hmenu-container']//a[div[text()='Video Games']])[1]");
+//    private static final By ALL_VIDEO_GAMES = By.xpath("//ul[@class='hmenu hmenu-visible hmenu-translateX']/li[normalize-space(.)='All Video Games']");
 
     WebDriver driver;
     WebDriverWait wait;
@@ -43,14 +44,14 @@ public class HomePage {
         driver.findElement(LOGIN_LINK).click();
     }
     public void navigateToAllVideoGames(){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(ALL_MENU_ICON));
-        driver.findElement(ALL_MENU_ICON).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(SEE_ALL));
-        driver.findElement(SEE_ALL).click();
-        ScrollHelper.scrollToElementInContainer(driver,VIDEO_GAMES,500,5);
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(ALL_MENU_ICON));
+//        driver.findElement(ALL_MENU_ICON).click();
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(SEE_ALL));
+//        driver.findElement(SEE_ALL).click();
+//        ScrollHelper.scrollToElementInContainer(driver,VIDEO_GAMES,500,5);
         wait.until(ExpectedConditions.visibilityOfElementLocated(VIDEO_GAMES));
         driver.findElement(VIDEO_GAMES).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(ALL_VIDEO_GAMES));
-        driver.findElement(ALL_VIDEO_GAMES).click();
+//        wait.until(ExpectedConditions.elementToBeClickable(ALL_VIDEO_GAMES));
+//        driver.findElement(ALL_VIDEO_GAMES).click();
     }
 }

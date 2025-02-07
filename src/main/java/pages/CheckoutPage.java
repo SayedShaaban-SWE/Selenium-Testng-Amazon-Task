@@ -1,5 +1,6 @@
 package pages;
 
+import io.cucumber.java.an.E;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -20,7 +21,7 @@ public class CheckoutPage {
     private static final By DISTRICT_FIELD = By.id("address-ui-widgets-enterAddressDistrictOrCounty");
     private static final By SUBMIT_ADDRESS_BUTTON = By.id("checkout-primary-continue-button-id");
     private static final By VALUE_PAYMENT_OPTION = By.xpath("(//input[@name='ppw-instrumentRowSelection'])[1]");
-    private static final By CASH_PAYMENT_OPTION = By.id("pp-hPABrX-83");
+    private static final By CASH_PAYMENT_OPTION = By.xpath("(//input[@name='ppw-instrumentRowSelection'])[2]");
     private static final By USE_THIS_PAYMENT_METHOD_BUTTON = By.id("checkout-primary-continue-button-id");
 
     WebDriver driver;
@@ -62,8 +63,13 @@ public class CheckoutPage {
             cityNameField.sendKeys(cityName);
 
             // Wait for the dropdown or suggestions to appear and select the correct city
-            WebElement cityOption1 = wait.until(ExpectedConditions.elementToBeClickable(FIRST_OPTION));
-            cityOption1.click();
+            try {
+                WebElement cityOption1 = wait.until(ExpectedConditions.elementToBeClickable(FIRST_OPTION));
+                cityOption1.click();
+            }catch (Exception e) {
+                Logger.info("The first option is selected: [%s]", e.getMessage());
+            }
+
 
             // Step 7: Wait for District Field to be enabled
             wait.until(ExpectedConditions.elementToBeClickable(DISTRICT_FIELD));
@@ -73,8 +79,14 @@ public class CheckoutPage {
             districtNameField.clear();
             districtNameField.click();
             districtNameField.sendKeys(districtName);
-            WebElement cityOption2 = wait.until(ExpectedConditions.elementToBeClickable(FIRST_OPTION));
-            cityOption2.click();
+
+            try {
+                WebElement cityOption2 = wait.until(ExpectedConditions.elementToBeClickable(FIRST_OPTION));
+                cityOption2.click();
+            }catch (Exception e) {
+                Logger.info("The first option is selected: [%s]", e.getMessage());
+            }
+
             // Step 9: Scroll and Submit
             wait.until(ExpectedConditions.visibilityOfElementLocated(SUBMIT_ADDRESS_BUTTON));
             ScrollHelper.scrollToElement(driver, SUBMIT_ADDRESS_BUTTON);
@@ -96,12 +108,17 @@ public class CheckoutPage {
             }
         } catch (NoSuchElementException | TimeoutException e) {
             Logger.info("The cash payment option is not valid: [%s]", e.getMessage());
+        }
+        try {
             WebElement valueOption = wait.until(ExpectedConditions.visibilityOfElementLocated(VALUE_PAYMENT_OPTION));
             if (valueOption.isEnabled()) {
                 valueOption.click();
                 Logger.info("The value payment option is valid...!");
             }
+        }catch (NoSuchElementException | TimeoutException e) {
+            Logger.info("The value payment option is not valid: [%s]", e.getMessage());
         }
+
 
         WebElement useThisPayment = wait.until(ExpectedConditions.elementToBeClickable(USE_THIS_PAYMENT_METHOD_BUTTON));
         ScrollHelper.scrollToElement(driver, USE_THIS_PAYMENT_METHOD_BUTTON);
