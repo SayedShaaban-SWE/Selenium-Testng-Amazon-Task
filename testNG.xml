@@ -1,35 +1,36 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="TestSuite" parallel="tests">
+    <parameter name="allure.results.directory" value="allure-results"/> <!-- Add this line -->
     <listeners>
         <listener class-name="utils.TestListener"/>
         <!-- For native TestNG tests -->
         <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
     </listeners>
 
-    <test name="Test with Chrome" >
-        <parameter name="browserName" value="chrome" />
+    <test name="Test with Chrome">
+        <parameter name="browserName" value="chrome"/>
         <classes>
-            <class name="tests.AmazonTests" />
+            <class name="tests.AmazonTests"/>
         </classes>
     </test>
 
-<!--    <test name="Test with Firefox" >-->
-<!--        <parameter name="browserName" value="firefox" />-->
-<!--        <classes>-->
-<!--            <class name="tests.AmazonTests" />-->
-<!--        </classes>-->
-<!--    </test>-->
-
-<!--    <test name="Test with Edge" >-->
-<!--        <parameter name="browserName" value="edge" />-->
-<!--        <classes>-->
-<!--            <class name="tests.AmazonTests" />-->
-<!--        </classes>-->
-<!--    </test>-->
-
-    <test name="Test reqres apis" >
+    <!-- <test name="Test with Firefox">
+        <parameter name="browserName" value="firefox"/>
         <classes>
-            <class name="tests.ApiTests" />
+            <class name="tests.AmazonTests"/>
+        </classes>
+    </test> -->
+
+    <!-- <test name="Test with Edge">
+        <parameter name="browserName" value="edge"/>
+        <classes>
+            <class name="tests.AmazonTests"/>
+        </classes>
+    </test> -->
+
+    <test name="Test reqres apis">
+        <classes>
+            <class name="tests.ApiTests"/>
         </classes>
     </test>
 </suite>
