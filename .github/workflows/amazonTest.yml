@@ -61,15 +61,33 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Check if test-results.log exists
+        id: check_test_results
+        run: |
+          if [ -f "logs/test-results.log" ]; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Upload test-results.log
-        if: exists('logs/test-results.log')
+        if: steps.check_test_results.outputs.exists == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: test-results-log
           path: logs/test-results.log
 
+      - name: Check if selenium-log.log exists
+        id: check_selenium_log
+        run: |
+          if [ -f "logs/selenium-log.log" ]; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Upload selenium-log.log
-        if: exists('logs/selenium-log.log')
+        if: steps.check_selenium_log.outputs.exists == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: selenium-log
