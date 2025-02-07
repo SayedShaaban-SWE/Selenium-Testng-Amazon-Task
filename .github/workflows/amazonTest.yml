@@ -38,7 +38,9 @@ jobs:
 
       - name: Generate Allure Report
         run: |
-          mvn allure:report
+          mkdir -p target/allure-report
+          mvn io.qameta.allure:allure-maven:report
+          cp -r allure-results target/allure-report
 
   upload-allure-report:
     runs-on: ubuntu-latest
@@ -49,16 +51,14 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
-          path: target/site/allure-maven-plugin
+          path: target/allure-report
 
       - name: Upload Allure Report as GitHub Pages
         if: github.ref == 'refs/heads/main'
         run: |
           mkdir -p docs
-          cp -r target/site/allure-maven-plugin/* docs/
+          cp -r target/allure-report/* docs/
           echo "allure-report.example.com" > docs/CNAME
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   upload-testng-report:
     runs-on: ubuntu-latest
@@ -69,7 +69,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: testng-report
-          path: target/surefire-reports
+          path: target/surefire-reports/TestSuite
 
   upload-test-result-log:
     runs-on: ubuntu-latest
@@ -79,10 +79,10 @@ jobs:
       - name: Check if test-results.log exists
         id: check_test_results
         run: |
-          if [ -f "logs/test-results.log" ]; then
-            echo "exists=true" >> $GITHUB_OUTPUT
+          if [ -e "logs/test-results.log" ]; then
+            echo "exists=true" >> $GITHUB_ENV
           else
-            echo "exists=false" >> $GITHUB_OUTPUT
+            echo "exists=false" >> $GITHUB_ENV
           fi
 
       - name: Upload test-results.log
@@ -100,10 +100,10 @@ jobs:
       - name: Check if selenium-log.log exists
         id: check_selenium_log
         run: |
-          if [ -f "logs/selenium-log.log" ]; then
-            echo "exists=true" >> $GITHUB_OUTPUT
+          if [ -e "logs/selenium-log.log" ]; then
+            echo "exists=true" >> $GITHUB_ENV
           else
-            echo "exists=false" >> $GITHUB_OUTPUT
+            echo "exists=false" >> $GITHUB_ENV
           fi
 
       - name: Upload selenium-log.log
@@ -131,7 +131,6 @@ jobs:
             View the workflow run here: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           to: sayed.swengineer@gmail.com
           from: ${{ secrets.EMAIL_USERNAME }}
-          content_type: text/plain
 
   notify-slack:
     runs-on: ubuntu-latest
