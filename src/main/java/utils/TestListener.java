@@ -14,12 +14,12 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onStart(ITestContext context) {
-        File outputDir = new File("test-output");
+        File outputDir = new File("logs");
         if (!outputDir.exists()) {
             outputDir.mkdirs();
         }
         try {
-            File file = new File("test-output/test-results.log");
+            File file = new File("logs/test-results.log");
             writer = new PrintWriter(new FileWriter(file, true), true);
         } catch (IOException e) {
             Logger.info("Can't access test-results.log file: [%s]", e.getMessage());

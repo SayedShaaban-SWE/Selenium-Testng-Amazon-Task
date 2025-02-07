@@ -13,50 +13,99 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Set up JDK 17
-      uses: actions/setup-java@v3
-      with:
-        java-version: '17'
-        distribution: 'temurin'
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
 
-    - name: Cache Maven packages
-      uses: actions/cache@v3
-      with:
-        path: ~/.m2/repository
-        key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-        restore-keys: |
-          ${{ runner.os }}-m2-
+      - name: Cache Maven packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-m2-
 
-    - name: Build with Maven
-      run: mvn clean install -DskipTests
+      - name: Build with Maven
+        run: mvn clean install -DskipTests
 
-    - name: Run TestNG Tests
-      run: mvn test
+      - name: Run TestNG Tests
+        run: mvn test
 
-    - name: Generate Allure Report
-      run: |
-        mvn allure:report
+      - name: Generate Allure Report
+        run: |
+          mvn allure:report
 
-    - name: Archive Allure Report
-      uses: actions/upload-artifact@v4
-      with:
-        name: allure-report
-        path: target/site/allure-maven-plugin
+      - name: Archive Allure Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: target/site/allure-maven-plugin
 
-    - name: Archive TestNG Report
-      uses: actions/upload-artifact@v4
-      with:
-        name: testng-report
-        path: target/surefire-reports
+      - name: Archive TestNG Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: testng-report
+          path: target/surefire-reports
 
-    - name: Upload Allure Report as GitHub Pages
-      if: github.ref == 'refs/heads/main'
-      run: |
-        mkdir -p docs
-        cp -r target/site/allure-maven-plugin/* docs/
-        echo "allure-report.example.com" > docs/CNAME
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload Allure Report as GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        run: |
+          mkdir -p docs
+          cp -r target/site/allure-maven-plugin/* docs/
+          echo "allure-report.example.com" > docs/CNAME
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload test-results.log
+        if: exists('logs/test-results.log')
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results-log
+          path: logs/test-results.log
+
+      - name: Upload selenium-log.log
+        if: exists('logs/selenium-log.log')
+        uses: actions/upload-artifact@v4
+        with:
+          name: selenium-log
+          path: logs/selenium-log.log
+
+  send-email:
+    runs-on: ubuntu-latest
+    needs: build-and-test
+    if: always()
+    steps:
+      - name: Send email on workflow result
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "Workflow Result: ${{ github.workflow }} - ${{ job.status }}"
+          body: |
+            The workflow "${{ github.workflow }}" has completed with status: ${{ job.status }}.
+            View the workflow run here: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          to: recipient@example.com
+          from: ${{ secrets.EMAIL_USERNAME }}
+          content_type: text/plain
+
+  notify-slack:
+    runs-on: ubuntu-latest
+    needs: build-and-test
+    if: always()
+    steps:
+      - name: Send Slack notification
+        uses: slackapi/slack-github-action@v1
+        with:
+          channel-id: 'YOUR_SLACK_CHANNEL_ID' # Replace with your Slack channel ID
+          slack-message: |
+            Workflow "${{ github.workflow }}" has completed with status: ${{ job.status }}.
+            View the workflow run here: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
