@@ -34,11 +34,18 @@ jobs:
         run: mvn clean install -DskipTests
 
       - name: Run TestNG Tests
-        run: mvn test
+        run: |
+          mkdir -p allure-results
+          mvn test -Dallure.results.directory=allure-results
 
       - name: Generate Allure Report
         run: |
           mvn io.qameta.allure:allure-maven:report -Dallure.results.directory=allure-results
+
+      - name: Debug Allure Results
+        run: |
+          echo "Contents of allure-results:"
+          ls -R allure-results
 
   upload-allure-report:
     runs-on: ubuntu-latest
@@ -49,13 +56,13 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
-          path: allure-results
+          path: target/site/allure-maven-plugin
 
       - name: Upload Allure Report as GitHub Pages
         if: github.ref == 'refs/heads/main'
         run: |
           mkdir -p docs
-          cp -r allure-results/* docs/
+          cp -r target/site/allure-maven-plugin/* docs/
           echo "allure-report.example.com" > docs/CNAME
 
   upload-testng-report:
@@ -110,6 +117,25 @@ jobs:
         with:
           name: selenium-log
           path: logs/selenium-log.log
+
+  send-email:
+    runs-on: ubuntu-latest
+    needs: build-and-test
+    if: always()
+    steps:
+      - name: Send email on workflow result
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "Workflow Result: ${{ github.workflow }} - ${{ job.status }}"
+          body: |
+            The workflow "${{ github.workflow }}" has completed with status: ${{ job.status }}.
+            View the workflow run here: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          to: sayed.swengineer@gmail.com
+          from: ${{ secrets.EMAIL_USERNAME }}
 
   notify-slack:
     runs-on: ubuntu-latest
