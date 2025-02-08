@@ -66,18 +66,3 @@ jobs:
         with:
           name: allure-report
           path: target/site/allure-maven-plugin
-
-  notify-slack:
-    runs-on: ubuntu-latest
-    needs: build-and-test
-    if: always()
-    steps:
-      - name: Send Slack notification
-        uses: slackapi/slack-github-action@v1
-        with:
-          channel-id: ${{ secrets.SLACK_CHANNEL_ID }}
-          slack-message: |
-            Workflow "${{ github.workflow }}" has completed with status: ${{ job.status }}.
-            View the workflow run here: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
