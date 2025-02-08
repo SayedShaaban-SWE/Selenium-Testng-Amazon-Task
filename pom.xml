@@ -14,9 +14,8 @@
         <allure.version>2.29.1</allure.version>
         <testng.version>7.10.2</testng.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <allure.results.directory>allure-results</allure.results.directory> <!-- Explicitly set results directory -->
+        <allure.results.directory>target/allure-results</allure.results.directory>
     </properties>
-
     <build>
         <plugins>
             <plugin>
