@@ -1,5 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="TestSuite">
+<suite name="TestSuite" parallel="tests">
+    <parameter name="allure.results.directory" value="allure-results"/>
     <listeners>
         <listener class-name="utils.TestListener"/>
         <!-- For native TestNG tests -->

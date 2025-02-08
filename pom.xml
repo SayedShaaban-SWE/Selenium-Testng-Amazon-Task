@@ -2,6 +2,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>org.example</groupId>
     <artifactId>Selenium-Testng-Amazon-Task</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -13,8 +14,9 @@
         <allure.version>2.29.1</allure.version>
         <testng.version>7.10.2</testng.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <allure.results.directory>target/allure-results</allure.results.directory>
+        <allure.results.directory>allure-results</allure.results.directory>
     </properties>
+
     <build>
         <plugins>
             <plugin>
@@ -36,9 +38,12 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
                     </suiteXmlFiles>
-                    <systemPropertyVariables>
-                        <allure.results.directory>${allure.results.directory}</allure.results.directory>
-                    </systemPropertyVariables>
+                    <systemProperties>
+                        <property>
+                            <name>allure.results.directory</name>
+                            <value>${allure.results.directory}</value>
+                        </property>
+                    </systemProperties>
                 </configuration>
             </plugin>
 
