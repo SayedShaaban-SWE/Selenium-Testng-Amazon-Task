@@ -5,17 +5,12 @@ import API.models.response.ApiGetUsersResponse;
 import API.models.response.ApiUpdateUserResponse;
 import API.utils.UserUtils;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import io.restassured.RestAssured;
-import io.restassured.response.Response;
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import utils.Logger;
 
 import java.util.Map;
-
-import static io.restassured.RestAssured.given;
 
 public class ApiTests {
     static SoftAssert softAssert = new SoftAssert();
