@@ -1,12 +1,13 @@
 name: Amazon CI/CD test
 
 on:
-  push:
+  push: # Run when push new changes.
     branches:
       - main
-  pull_request:
+  pull_request: # Run when make PR.
     branches:
       - main
+  workflow_dispatch: # Allow for manually triggering of this workflow.
 
 jobs:
   build-and-test:
