@@ -38,6 +38,10 @@ jobs:
           mkdir -p allure-results
           mvn test -Dallure.results.directory=allure-results
 
+      - name: Print Test Results
+        run: |
+          cat target/surefire-reports/TestSuite.txt
+
       - name: Debug Allure Results
         run: |
           echo "Contents of allure-results:"
@@ -46,6 +50,11 @@ jobs:
       - name: Generate Allure Report
         run: |
           mvn io.qameta.allure:allure-maven:report -Dallure.results.directory=allure-results
+
+      - name: Debug Allure Report
+        run: |
+          echo "Contents of target/site/allure-maven-plugin:"
+          ls -R target/site/allure-maven-plugin
 
       - name: Debug Workspace
         run: |
