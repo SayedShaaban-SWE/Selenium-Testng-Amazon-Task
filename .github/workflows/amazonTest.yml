@@ -36,104 +36,24 @@ jobs:
       - name: Run TestNG Tests
         run: |
           mkdir -p allure-results
-          mvn test -Dallure.results.directory=allure-results
+          mvn test -Dallure.results.directory=allure-results -Dtestng.verbose=2
 
       - name: Debug Allure Results
         run: |
           echo "Contents of allure-results:"
           ls -R allure-results
 
-      - name: Generate Allure Report
+      - name: Debug Surefire Reports
         run: |
-          mvn io.qameta.allure:allure-maven:report -Dallure.results.directory=allure-results
+          echo "Contents of Surefire reports:"
+          ls -R target/surefire-reports
 
-      - name: Debug Workspace
+      - name: Run a Single Test for Debugging
         run: |
-          echo "Contents of workspace:"
-          ls -R
+          mvn -Dtest=YourTestClass test
 
-  upload-allure-report:
-    runs-on: ubuntu-latest
-    needs: build-and-test
-    if: always()
-    steps:
       - name: Upload Allure Report
         uses: actions/upload-artifact@v4
         with:
           name: allure-report
           path: target/site/allure-maven-plugin
-
-      - name: Upload Allure Report as GitHub Pages
-        if: github.ref == 'refs/heads/main'
-        run: |
-          mkdir -p docs
-          cp -r target/site/allure-maven-plugin/* docs/
-          echo "allure-report.example.com" > docs/CNAME
-
-  upload-testng-report:
-    runs-on: ubuntu-latest
-    needs: build-and-test
-    if: always()
-    steps:
-      - name: Upload TestNG Report
-        uses: actions/upload-artifact@v4
-        with:
-          name: testng-report
-          path: target/surefire-reports/TestSuite
-
-  upload-test-result-log:
-    runs-on: ubuntu-latest
-    needs: build-and-test
-    if: always()
-    steps:
-      - name: Check if test-results.log exists
-        id: check_test_results
-        run: |
-          if [ -e "logs/test-results.log" ]; then
-            echo "exists=true" >> $GITHUB_ENV
-          else
-            echo "exists=false" >> $GITHUB_ENV
-          fi
-
-      - name: Upload test-results.log
-        if: steps.check_test_results.outputs.exists == 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: test-results-log
-          path: logs/test-results.log
-
-  upload-selenium-log:
-    runs-on: ubuntu-latest
-    needs: build-and-test
-    if: always()
-    steps:
-      - name: Check if selenium-log.log exists
-        id: check_selenium_log
-        run: |
-          if [ -e "logs/selenium-log.log" ]; then
-            echo "exists=true" >> $GITHUB_ENV
-          else
-            echo "exists=false" >> $GITHUB_ENV
-          fi
-
-      - name: Upload selenium-log.log
-        if: steps.check_selenium_log.outputs.exists == 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: selenium-log
-          path: logs/selenium-log.log
-
-  notify-slack:
-    runs-on: ubuntu-latest
-    needs: build-and-test
-    if: always()
-    steps:
-      - name: Send Slack notification
-        uses: slackapi/slack-github-action@v1
-        with:
-          channel-id: ${{ secrets.SLACK_CHANNEL_ID }}
-          slack-message: |
-            Workflow "${{ github.workflow }}" has completed with status: ${{ job.status }}.
-            View the workflow run here: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
